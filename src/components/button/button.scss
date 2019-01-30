@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+button {
+  height: 36px;
+  border-radius: $main-radius;
+  background-color: $main-color;
+  color: white;
+  border: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}

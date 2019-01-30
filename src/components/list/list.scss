@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.list {
+  width: 400px;
+  margin: auto;
+  > p {
+    border-radius: $main-radius;
+    text-align: left;
+    background-color: white;
+    margin: 5px 0px;
+    padding: 5px 10px;
+    position: relative;
+    > i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+}

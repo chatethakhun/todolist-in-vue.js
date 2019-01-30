@@ -1,0 +1,5 @@
+<div class="list">
+  <p v-for="(data, index) in datas" :key="index">
+    {{ data }}<i class="fas fa-trash" v-on:click="handleDelete(data)"></i>
+  </p>
+</div>
