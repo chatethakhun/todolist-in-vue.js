@@ -6,6 +6,7 @@ import './todo-list.scss'
 import Input from '../components/input/input'
 import Button from '../components/button/button'
 import List from '../components/list/list'
+import { Query } from '../constant/query.js'
 
 export default {
   name: 'HelloWorld',
@@ -18,7 +19,14 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       name: '',
-      lists: []
+      lists: [],
+      data: []
+    }
+  },
+  apollo: {
+    lists: {
+      query: Query,
+      update: ({ languages }) => languages
     }
   },
   methods: {
