@@ -20,13 +20,21 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       name: '',
       lists: [],
-      data: []
+      data: [],
+      loading: true
     }
   },
   apollo: {
     lists: {
       query: Query,
-      update: ({ languages }) => languages
+      update: ({ languages }) => {
+        return languages
+      },
+      result ({ data: { languages }, loading }) {
+        this.loading = loading
+        this.lists = languages
+      },
+      loadingKey: 'loading'
     }
   },
   methods: {

@@ -7,7 +7,8 @@ import './list.scss'
 export default {
   name: 'list',
   props: {
-    datas: Array
+    datas: Array,
+    loading: Boolean
   },
   methods: {
     handleDelete: function (data) {

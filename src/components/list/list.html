@@ -1,4 +1,5 @@
 <div class="list">
+  <div v-if="loading"><p>Loading</p></div>
   <p v-for="(data, index) in datas" :key="index">
     {{ data.name }}<i class="fas fa-trash" v-on:click="handleDelete(data)"></i>
   </p>

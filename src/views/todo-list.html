@@ -1,5 +1,6 @@
 <div class="todo-list-container">
   <form v-on:submit="handleSubmit">
+
     <v-input
       id="input-todo"
       label="Add Todo"
@@ -10,5 +11,5 @@
     ></v-input>
     <todo-button label="Add"/>
   </form>
-  <list :datas="lists" @handleDelete="handleDelete"></list>
+  <list :datas="lists" @handleDelete="handleDelete" :loading="loading" ></list>
 </div>
